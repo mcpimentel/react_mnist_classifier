@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Canvas from "./components/Canvas";
+import { InferenceSession } from "onnxjs";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const INITIAL_STATE = {
+  sessionRunning: false,
+  inferenceTime: 0,
+  error: false,
+  output: [],
+  modelLoading: false,
+  modelLoaded: false,
+  backendHint: 'webgl', // ['webgl', 'wasm', 'cpu']
+  selectedImage: null,
+}
+
+class App extends React.Component {
+  componentDidMount() {
+    this.runModel();
+  }
+
+  state = { ...INITIAL_STATE };
+
+  session = new InferenceSession({ backendHint: this.state.backendHint });
+  
+  runModel = async () => {
+    try {
+      if (!this.state.modelLoaded) {
+        this.setState({
+          modelLoading: true,
+        });
+        await this.session.loadModel('./models/onnx_model.onnx');
+        this.setState({
+          modelLoaded: true,
+          modelLoading: false,
+        });
+      }
+    }
+    catch(e) {
+      console.warn(e);
+    }
+    
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          A simple demo of a classification model running on the browser! WORK IN PROGRESS!
+          <p>
+            Tested on a couple of browsers only.
+          </p>
+        </header>
+        <Canvas status={this.state} session={this.session} />
+      </div>
+    );
+  }
 }
 
 export default App;
