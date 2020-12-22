@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# React MNIST classifier
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Name of the project: **react_mnist_classifier**
+
+This project is a simple demo of using a machine learning classification model for classifying handwritten digits. 
+
+Here, we are using the `gh-pages` module for deploying the page in github.
 
 ## Available Scripts
 
@@ -9,7 +13,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000/react_mnist_classifier](http://localhost:3000/react_mnist_classifier) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
@@ -18,6 +22,11 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run deploy`
+
+Builds and deploys the page in github pages.\
+See the command in the file **package.json**.
 
 ### `npm run build`
 
