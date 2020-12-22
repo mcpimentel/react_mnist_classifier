@@ -10,9 +10,9 @@ Check the demo of the app [here](https://mcpimentel.github.io/react_mnist_classi
 
 Here, we are using the `gh-pages` node module for deploying the app on github.
 
-## Available scripts for working the app
+## Main scripts for working the app
 
-In the project directory, you can run:
+Checkout the code, and in the project directory, you can run:
 
 ### `npm start`
 
