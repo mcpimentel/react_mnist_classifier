@@ -14,7 +14,10 @@ const INITIAL_STATE = {
   selectedImage: null,
 }
 
+// if on localhost >> uncomment next line
 const MODEL_URL = "./react_mnist_classifier/models/onnx_model.onnx";
+// if on localhost >> comment next line
+//const MODEL_URL = "./models/onnx_model.onnx";
 
 class App extends React.Component {
   componentDidMount() {

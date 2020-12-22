@@ -1,32 +1,35 @@
-# React MNIST classifier
+# React MNIST Classifier
 
-Name of the project: **react_mnist_classifier**
+This project contains a simple demo web-based application of a machine learning classification model for classifying handwritten digits.
 
-This project is a simple demo of using a machine learning classification model for classifying handwritten digits. 
+This app uses [ReactJS](https://reactjs.org/) and [ONNXJS](https://github.com/microsoft/onnxjs). 
 
-Here, we are using the `gh-pages` module for deploying the page in github.
+## Demo App
 
-## Available Scripts
+Check the demo of the app [here](https://mcpimentel.github.io/react_mnist_classifier/).
+
+Here, we are using the `gh-pages` node module for deploying the app on github.
+
+## Available scripts for working the app
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode (on your *localhost*)\
 Open [http://localhost:3000/react_mnist_classifier](http://localhost:3000/react_mnist_classifier) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm run deploy`
+
+Builds and deploys the page in github pages.\
+See the command (and homepage) in the file **package.json**. 
+
+## Other available *npm* scripts for working the app
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run deploy`
-
-Builds and deploys the page in github pages.\
-See the command in the file **package.json**.
 
 ### `npm run build`
 
