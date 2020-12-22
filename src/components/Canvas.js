@@ -88,7 +88,7 @@ const Canvas = props => {
         canvasMouseMove(event);
     }
     const canvasTouchStart = (event) => {
-        console.log("touch start");
+        //console.log("touch start");
         isMouseDown = true;
         if (hasIntroText) {
             clearCanvas();
@@ -128,7 +128,7 @@ const Canvas = props => {
     }
     // stop drawing when mouse is up
     const bodyMouseUp = () => {
-        // console.log("body mouse up");
+        //console.log("body mouse up");
         isMouseDown = false;
         //console.log({ fromX: lastX, fromY: lastY });
     }
@@ -136,7 +136,7 @@ const Canvas = props => {
     const bodyTouchEnd = () => {
         // console.log("touch end");
         isMouseDown = false;
-        console.log({ fromX: lastX, fromY: lastY });
+        //console.log({ fromX: lastX, fromY: lastY });
     }
     // We won't be able to detect a MouseUp event if the mouse has moved
     // ouside the window, so when the mouse leaves the window, we set
@@ -144,7 +144,7 @@ const Canvas = props => {
     // continuing to be drawn when the mouse returns to the canvas after
     // having been released outside the window.
     const bodyMouseOut = () => {
-        // console.log("body mouse out");
+        //console.log("body mouse out");
         isMouseDown = false;
         //if (!event.relatedTarget || event.relatedTarget.nodeName === "HTML") {
         //    isMouseDown = false;
@@ -170,7 +170,6 @@ const Canvas = props => {
             const outputTensor = outputMap.values().next().value;
             const predictions = outputTensor.data;
             const maxPrediction = Math.max(...predictions);
-            //console.log(predictions);
             for (let i = 0; i < predictions.length; i++) {
                 const element = document.getElementById(`prediction-${i}`);
                 element.children[1].children[0].style.width = `${predictions[i] * 100}%`;
@@ -189,7 +188,7 @@ const Canvas = props => {
             <button className="button"
                 onClick={() => {
                     clearCanvas();
-                    console.log("Button Clear Clicked")
+                    //console.log("button clear clicked")
                 }}>CLEAR
             </button>
             <div>

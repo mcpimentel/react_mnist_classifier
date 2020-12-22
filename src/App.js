@@ -15,9 +15,16 @@ const INITIAL_STATE = {
 }
 
 // if on localhost >> uncomment next line
-const MODEL_URL = "./react_mnist_classifier/models/onnx_model.onnx";
+let MODEL_URL = "./models/onnx_model.onnx";
 // if on localhost >> comment next line
 //const MODEL_URL = "./models/onnx_model.onnx";
+
+if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+  MODEL_URL = './react_mnist_classifier/models/onnx_model.onnx';
+  // console.log("It's a local server!");
+} else {
+  // console.log("It's NOT a local server!");
+}
 
 class App extends React.Component {
   componentDidMount() {
@@ -51,11 +58,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          A simple demo of a classification model running on the browser! WORK IN PROGRESS!
-          <p>
-            Tested on a couple of browsers only.
-          </p>
+          Handwritten digits classification.
+          <p> A simple demo of a classification model running on the browser </p>
         </header>
+        <p> The app is implemented using <a href='https://reactjs.org/'>ReactJS</a> and <a href='https://github.com/microsoft/onnxjs'>ONNXJS</a>. See <a href='https://github.com/mcpimentel/react_mnist_classifier'>here</a> for code and other details. </p> 
+        <p> This app has been tested with Google Chrome (both desktop and mobile devices)! </p>
         <Canvas status={this.state} session={this.session} />
       </div>
     );
