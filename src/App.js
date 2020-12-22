@@ -14,6 +14,8 @@ const INITIAL_STATE = {
   selectedImage: null,
 }
 
+const MODEL_URL = "./react_mnist_classifier/models/onnx_model.onnx";
+
 class App extends React.Component {
   componentDidMount() {
     this.runModel();
@@ -29,7 +31,7 @@ class App extends React.Component {
         this.setState({
           modelLoading: true,
         });
-        await this.session.loadModel('./models/onnx_model.onnx');
+        await this.session.loadModel(MODEL_URL);
         this.setState({
           modelLoaded: true,
           modelLoading: false,
