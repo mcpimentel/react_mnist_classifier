@@ -2,6 +2,8 @@
 
 This project contains a simple demo web-based application of a machine learning classification model for classifying handwritten digits.
 
+Note, that this is an extension of a sibbling repository. See the project more details: [https://github.com/mcpimentel/mnist_classifier](https://github.com/mcpimentel/mnist_classifier).
+
 This app uses [ReactJS](https://reactjs.org/) and [ONNXJS](https://github.com/microsoft/onnxjs). 
 
 ## Demo App
