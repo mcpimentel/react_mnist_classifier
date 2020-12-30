@@ -2,13 +2,13 @@
 
 This project contains a simple demo web-based application of a machine learning classification model for classifying handwritten digits.
 
-Note, that this is an extension of a sibbling repository. See the project more details: [https://github.com/mcpimentel/mnist_classifier](https://github.com/mcpimentel/mnist_classifier).
-
-This app uses [ReactJS](https://reactjs.org/) and [ONNXJS](https://github.com/microsoft/onnxjs). 
+Note, that this is an extension of a sibbling repository. See the main project repository for more details: [https://github.com/mcpimentel/mnist_classifier](https://github.com/mcpimentel/mnist_classifier).
 
 ## Demo App
 
 Check the demo of the app [here](https://mcpimentel.github.io/react_mnist_classifier/).
+
+This app uses [ReactJS](https://reactjs.org/) and [ONNXJS](https://github.com/microsoft/onnxjs). 
 
 Here, we are using the `gh-pages` node module for deploying the app on github.
 
