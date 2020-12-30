@@ -15,7 +15,7 @@ const CANVAS_SCALE = 0.5;
 let ctx = null;
 
 const Canvas = props => {
-    const { session, status } = props; 
+    const { session, modelloaded } = props; 
 
     // setup canvas
     const canvas = useRef();
@@ -162,7 +162,7 @@ const Canvas = props => {
     }
 
     const updatePredictions = async () => {
-        if (status && status.modelLoaded) {
+        if (modelloaded===1) {
             // Get the predictions for the canvas data.
             const imgData = getTensorFromCanvasContext(ctx);
         
